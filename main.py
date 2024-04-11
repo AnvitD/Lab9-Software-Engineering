@@ -5,6 +5,13 @@ def encode(password):
 
     return "".join(encoded)
 
+def decode(enc):
+    decoded = []
+    for i in range(len(enc)):
+        decoded.append(chr(ord(enc[i] - 3))
+
+    return "".join(decoded)
+
 def menu():
     print("Menu")
     print("-------------")
@@ -26,7 +33,8 @@ def main():
             enc = encode(password)
             print("Your password has been encoded and stored!")
         elif choice == "2":
-            print(f"The encoded password is {enc}, and the original password is {}")
+            dec = decode(enc)
+            print(f"The encoded password is {enc}, and the original password is {dec}")
         elif choice == "3":
             break
         else:
